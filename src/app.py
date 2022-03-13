@@ -23,6 +23,11 @@ def add_new_todo():
     todos.append(decoded_object)
     return jsonify(todos)
 
+    #borrando un item:
+@app.route('/todos/<int:position>', methods=['DELETE'])
+def delete_todo(position):
+    print("This is the position to delete: ",position)
+    return 'something'
 
     #retornando un item:
 #@app.route('todos/<int:id_item>', methods=['GET'])
